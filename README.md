@@ -97,3 +97,13 @@ v0.2 will use:
 - Optional regex with negative lookarounds for explicit refusals
 
 Open issue tracker: https://github.com/weiseer/prompt-redteam/issues
+
+
+## 🤝 Companion products (same author)
+
+Full AI agent QA + safety stack:
+
+- **mcp-doctor** - github.com/weiseer/mcp-doctor - install-time MCP supply-chain trust scanner
+- **prompt-redteam** (this repo) - open-source jailbreak / prompt-injection tester
+- **AI Agent QA Eval Pack** - 23 YAML test cases for tool-using agents across 6 failure dimensions. 9 at weiseer.gumroad.com/l/dcipxt
+
