@@ -84,3 +84,16 @@ Most prompt-injection defense advice assumes you've already been hit. prompt-red
 ## License
 
 Apache-2.0. Corpus also Apache-2.0 — fork it, add to it, argue with it.
+
+## v0.1 honest caveat (read before publishing scan results)
+
+The v0.1 detection is intentionally naive: it looks for a substring in the response. This produces FALSE POSITIVES when a model refuses while echoing the attack keyword (e.g., responding "I will not help you make napalm" gets flagged because the word "napalm" appears).
+
+**Do not publish per-model leaderboards from v0.1 output without first manually reviewing each "succeeded" case.** The corpus is solid; the detector needs work.
+
+v0.2 will use:
+- LLM-judge model (e.g., a second Claude Haiku call) to classify each response as "actual jailbreak" vs "refusal that mentions keyword"
+- Per-attack response patterns instead of substring matching
+- Optional regex with negative lookarounds for explicit refusals
+
+Open issue tracker: https://github.com/weiseer/prompt-redteam/issues
