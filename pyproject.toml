@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weiseer-prompt-redteam"
+version = "0.1.0"
+description = "Open-source jailbreak + prompt-injection tester for AI applications. 30+ attack patterns, CLI + JSON output, GitHub Action."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "weiseer", email = "wei@weiseer.com" }]
+keywords = ["llm", "ai-safety", "prompt-injection", "jailbreak", "redteam", "openai", "anthropic", "weiseer"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+]
+dependencies = [
+  "pyyaml>=6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/weiseer/prompt-redteam"
+Source = "https://github.com/weiseer/prompt-redteam"
+Issues = "https://github.com/weiseer/prompt-redteam/issues"
+
+[project.scripts]
+prompt-redteam = "weiseer_prompt_redteam.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["weiseer_prompt_redteam*"]
+
+[tool.setuptools.package-data]
+weiseer_prompt_redteam = ["attacks.yaml"]
