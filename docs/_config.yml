@@ -1,0 +1,5 @@
+title: "prompt-redteam — jailbreak & prompt-injection tester"
+description: "Free open-source: red-team your system prompt against 30+ jailbreak/injection attacks before launch."
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-sitemap
